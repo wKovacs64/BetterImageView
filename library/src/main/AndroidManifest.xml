@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest
+    package="com.wkovacs64.betterimageview"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application tools:ignore="GoogleAppIndexingWarning" />
+
+</manifest>

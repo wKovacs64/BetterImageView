@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">BetterImageView</string>
+    <string name="biv">BetterImageView:</string>
+    <string name="iv">ImageView:</string>
+</resources>
