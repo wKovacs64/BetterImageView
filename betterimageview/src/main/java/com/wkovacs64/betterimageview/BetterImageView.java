@@ -16,7 +16,7 @@ import android.widget.ImageView;
  * android:adjustViewBounds} attribute on API 17 and below. It also adds support for the {@code
  * android:foreground} attribute to allow for such things as setting a ripple without the need to
  * wrap the {@code ImageView} in a {@code FrameLayout}.
- * <p/>
+ * <p>
  * Credit to Sittiphol Phanvilai and Jake Wharton as this is essentially a hybrid of Sittiphol's
  * {@code AdjustableImageView} and Jake's {@code ForegroundImageView}.
  *

@@ -1,0 +1,65 @@
+apply plugin: 'com.jfrog.bintray'
+
+version = libraryVersion
+
+def getBintrayUserName() {
+    return hasProperty('BINTRAY_USERNAME') ? BINTRAY_USERNAME : ""
+}
+
+def getBintrayApiKey() {
+    return hasProperty('BINTRAY_APIKEY') ? BINTRAY_APIKEY : ""
+}
+
+def getGpgPassword() {
+    return hasProperty('SIGNING_PASSWORD') ? SIGNING_PASSWORD  : ""
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+bintray {
+    dryRun = false
+    publish = true
+
+    user = getBintrayUserName()
+    key = getBintrayApiKey()
+
+    configurations = ['archives']
+
+    pkg {
+        repo = bintrayRepo
+        name = bintrayName
+        licenses = allLicenses
+        vcsUrl = gitUrl
+        websiteUrl = siteUrl
+        publicDownloadNumbers = false
+
+        version {
+            name = libraryVersion
+            desc = libraryDescription
+            vcsTag = libraryVersion
+            gpg {
+                sign = true //Determines whether to GPG sign the files. The default is false
+                passphrase = getGpgPassword()
+                //Optional. The passphrase for GPG signing'
+            }
+        }
+    }
+}

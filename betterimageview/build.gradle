@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+    }
+}
+
+ext {
+    libraryVersion = '1.0.1-SNAPSHOT'
+
+    libraryName = 'BetterImageView'
+    libraryDescription = 'A better ImageView widget which backports adjustViewBounds behavior and supports foreground drawables.'
+
+    bintrayRepo = 'maven'
+    bintrayName = 'betterimageview'
+
+    publishedGroupId = 'com.wkovacs64'
+    artifact = 'betterimageview'
+
+    siteUrl = 'https://github.com/wKovacs64/BetterImageView'
+    gitUrl = 'https://github.com/wKovacs64/BetterImageView.git'
+
+    developerId = 'wKovacs64'
+    developerName = 'Justin Hall'
+    developerEmail = 'justin.r.hall@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: rootProject.file('gradle/maven.gradle')
+apply from: rootProject.file('gradle/bintray.gradle')
