@@ -15,7 +15,7 @@ There are existing solutions to each issue individually (see the Credits section
 ##### Gradle
 
 ```groovy
-compile 'com.wkovacs64:betterimageview:1.0.0'
+compile 'com.wkovacs64:betterimageview:1.0.1'
 ```
 
 ##### Maven
@@ -24,7 +24,7 @@ compile 'com.wkovacs64:betterimageview:1.0.0'
 <dependency>
   <groupId>com.wkovacs64</groupId>
   <artifactId>betterimageview</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
 </dependency>
 ```
 
