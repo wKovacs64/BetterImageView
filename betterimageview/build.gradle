@@ -10,7 +10,7 @@ android {
 }
 
 ext {
-    libraryVersion = '1.0.1'
+    libraryVersion = '1.0.2-SNAPSHOT'
 
     libraryName = 'BetterImageView'
     libraryDescription = 'A better ImageView widget which backports adjustViewBounds behavior and supports foreground drawables.'
