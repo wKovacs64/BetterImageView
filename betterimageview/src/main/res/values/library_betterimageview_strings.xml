@@ -9,7 +9,7 @@
 	<string name="library_betterimageview_libraryName">BetterImageView</string>
 	<string name="library_betterimageview_libraryDescription">A better ImageView widget which backports adjustViewBounds behavior and supports foreground drawables.</string>
 	<string name="library_betterimageview_libraryWebsite">https://github.com/wKovacs64/BetterImageView</string>
-	<string name="library_betterimageview_libraryVersion">1.0.1</string>
+	<string name="library_betterimageview_libraryVersion">1.0.2</string>
 	<!-- OpenSource section -->
 	<string name="library_betterimageview_isOpenSource">true</string>
 	<string name="library_betterimageview_repositoryLink">https://github.com/wKovacs64/BetterImageView</string>
